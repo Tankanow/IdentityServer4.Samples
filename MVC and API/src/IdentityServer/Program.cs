@@ -7,9 +7,11 @@ namespace Host
     {
         public static void Main(string[] args)
         {
+            var url = "http://*:5000";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://localhost:5000/")
+                .UseUrls(url)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()

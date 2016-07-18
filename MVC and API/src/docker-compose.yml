@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  api:
+    build: ./Api
+    ports:
+      - "1773:1773"
+    network_mode: "host"
+
+  id_server:
+    build: ./IdentityServer
+    ports:
+      - "5000:5000"
+    network_mode: "host"
